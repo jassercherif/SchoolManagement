@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
 
@@ -18,10 +19,22 @@ function AddStudent() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour soumettre le formulaire (envoi au serveur, etc.)
-    console.log('Student submitted:', student);
+    try {
+      // Make an HTTP POST request to add the student to the server
+      await axios.post('http://localhost:7070/create', student);
+      console.log('Student added successfully:', student);
+      // Clear the form after successful submission
+      setStudent({
+        firstName: '',
+        lastName: '',
+        age: '',
+        teacher: '',
+      });
+    } catch (error) {
+      console.error('Error adding student:', error);
+    }
   };
 
   return (

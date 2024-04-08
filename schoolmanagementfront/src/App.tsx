@@ -5,6 +5,8 @@ import SchoolNavbar from './Pages/NavBar';
 import WelcomePage from './Pages/WelcomePage';
 import StudentList from './Pages/StudentList';
 import AddStudent from './Pages/AddStudent';
+import Management from './Pages/Management'; 
+
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -26,8 +28,9 @@ function App() {
       <div>
         <SchoolNavbar />
         <Routes>
-          <Route path="/" element={<WelcomePage />} />
-          <Route path="/student-list" element={<StudentList students={students} />} />
+          <Route path="/" element={<WelcomePage   />} />
+          <Route path="/management" element={<Management />} />
+          <Route path="/student-list" element={<StudentList students={students} setStudents={setStudents} />} />
           <Route path="/add-student" element={<AddStudent />} />
         </Routes>
       </div>
