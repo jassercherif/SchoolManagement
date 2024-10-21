@@ -1,0 +1,29 @@
+/* AddStudent.css */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Takes the full viewport height */
+    background-color: #f5f5f5; /* Light background */
+  }
+  
+  .form-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    width: 100%;
+    max-width: 450px; /* Keep the form compact */
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40; /* Darker color for the title */
+  }
+  
+  .submit-btn {
+    width: 100%; /* Full-width button for better UI */
+    margin-top: 1rem;
+  }
+  

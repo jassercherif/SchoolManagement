@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Button, Form } from 'react-bootstrap';
 import { useState } from 'react';
+import './AddStudent.css';
 
 function AddStudent() {
   const [student, setStudent] = useState({
@@ -38,9 +39,9 @@ function AddStudent() {
   };
 
   return (
-    <div style={styles.container}>
-      <Form style={styles.form} onSubmit={handleSubmit}>
-        <h1>Add New Students</h1>
+    <div className="form-container">
+      <Form className="form-box" onSubmit={handleSubmit}>
+        <h1 className="form-title">Add New Students</h1>
         <Form.Group className="mb-3" controlId="formFirstName">
           <Form.Label>First Name</Form.Label>
           <Form.Control
@@ -49,6 +50,7 @@ function AddStudent() {
             value={student.firstName}
             onChange={handleChange}
             placeholder="Enter your first name"
+            required
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formLastName">
@@ -59,6 +61,7 @@ function AddStudent() {
             value={student.lastName}
             onChange={handleChange}
             placeholder="Enter your last name"
+            required
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formAge">
@@ -69,6 +72,9 @@ function AddStudent() {
             value={student.age}
             onChange={handleChange}
             placeholder="Enter your age"
+            min="15"
+            max="20"
+            required
           />
           <Form.Text className="text-muted">It must be between 15 and 20</Form.Text>
         </Form.Group>
@@ -80,10 +86,11 @@ function AddStudent() {
             value={student.teacher}
             onChange={handleChange}
             placeholder="Enter your teacher's name"
+            required
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="submit-btn">
           Add
         </Button>
       </Form>
