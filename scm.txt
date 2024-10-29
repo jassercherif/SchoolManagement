@@ -1,0 +1,9 @@
+U2YqHPFYFaE9mae7
+mongodb+srv://jassercherif:U2YqHPFYFaE9mae7@cluster0.0cbtr7i.mongodb.net/
+npm install --save reactstrap react react-dom
+npm i react-icons
+npm install react-bootstrap bootstrap
+npm install axios //to send requests to backend
+npm i // to install all the packages in package.json
+./mvnw clean package // Build your Spring Boot application to generate the JAR file
+
