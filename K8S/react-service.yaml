@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app
+spec:
+  type: NodePort
+  ports:
+    - port: 5173
+      targetPort: 5173
+      nodePort: 30007
+  selector:
+    app: react-app

@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: school-management-ingress
+  annotations:
+    # Ensures NGINX ingress handles the backend service correctly
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: frontend.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: react-app
+                port:
+                  number: 5173
+    - host: backend.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: spring-boot-app
+                port:
+                  number: 7070
