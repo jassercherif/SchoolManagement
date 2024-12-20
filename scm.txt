@@ -1,5 +1,4 @@
-U2YqHPFYFaE9mae7
-mongodb+srv://jassercherif:U2YqHPFYFaE9mae7@cluster0.0cbtr7i.mongodb.net/
+
 npm install --save reactstrap react react-dom
 npm i react-icons
 npm install react-bootstrap bootstrap
